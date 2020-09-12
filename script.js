@@ -24,7 +24,7 @@ $(document).ready(function () {
 
     function searchCities(cityName) {
 
-        let queryURL = "http://api.openweathermap.org/data/2.5/weather?q=" + cityName + "&appid=f9b50ef2bff87e9c4f3539720b45c8b3";
+        let queryURL = "https://api.openweathermap.org/data/2.5/weather?q=" + cityName + "&appid=f9b50ef2bff87e9c4f3539720b45c8b3";
 
         $.ajax({
             url: queryURL,
