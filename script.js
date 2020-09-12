@@ -5,7 +5,7 @@ let searchedCities = [];
 
 $(document).ready(function () {
     $("#weatherImage").hide();
-    
+
     //loads page with last searched city
     let cityName = localStorage.getItem('userCity');
     searchCities(cityName)
@@ -43,16 +43,16 @@ $(document).ready(function () {
                     url: queryURL2,
                     method: "GET"
                 })
-                    //single day forecast 
+                    //single day forecast
                     .then(function (response) {
                         $("#5day").empty()
                         $("#uv").empty()
 
                         //configure icon
                         let imageData = response.current.weather[0].icon;
-                        let imageIcon = "http://api.openweathermap.org/img/w/" + imageData + ".png";
+                        let imageIcon = "https://api.openweathermap.org/img/w/" + imageData + ".png";
                         //create elements
-                        $("#weatherImage").attr("src", imageIcon); 
+                        $("#weatherImage").attr("src", imageIcon);
                         $("#weatherImage").show();
                         $("#enteredCity").html(cityName + " - " + todayDate);
                         $("#temperature").text("Temperature: " + response.current.temp);
@@ -61,7 +61,7 @@ $(document).ready(function () {
                         $(".card-header").text(cityName);
 
                         let uvIndex = response.current.uvi
-                        
+
                         //populate history
                         $("#history").append(" -" + cityName + "- ");
 
@@ -87,9 +87,7 @@ $(document).ready(function () {
                             $("#5day").append(` - Windspeed: ` + response.daily[day].wind_speed + " ")
 
                         }
-                    });        
+                    });
             });
     }
 });
-
-//create card
