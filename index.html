@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Weather Dashboard</title>
+  <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+  <script src="script.js"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <h1>Weather Dashboard</h1>
+
+  <form>
+    <div>
+      <label for="cityLabel">Enter a city: </label>
+      <input type="text" id="userCity" name="city" placeholder="London, Seattle, Tokyo">
+    </div>
+    <div>
+      <button id="submitCity">Submit</button>
+    </div>
+  </form>
+
+  <div id="cityDisplay">
+    <h2>Current City:</h2>
+    <h3 id="todayDateEl"></h3>
+    <h3 id="enteredCity"></h3>
+    <img src="" id="weatherImage" alt="weather image">
+    <h3 id="temperature"></h3>
+    <h3 id="humidity"></h3>
+    <h3 id="windspeed"></h3>
+    <h3 id="uv"></h3>
+  </div>
+
+  <hr>
+
+  <h2>Five Day Forecast:</h2>
+  <div id="5day">
+    <img src="" id="weatherImage2" alt="weather image">
+
+  </div>
+
+  <div id="searchHistory">
+    <h2>Search History:</h2>
+      <ul id="history">
+        
+
+      </ul>
+  </div>
+
+
+
+  <script type="text/javascript"></script>
+
+</body>
+
+</html>

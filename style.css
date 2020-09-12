@@ -1,0 +1,14 @@
+* {
+    background: #ffffff;
+  }
+
+  .good{
+    background:green
+  }
+  .medium{
+      background: yellow
+  }
+  .bad{
+      background: red
+  }
+ 
